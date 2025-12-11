@@ -5,6 +5,7 @@
         <span class="user-greeting-sidenav">
             Olá, {{ (informacoes$ | async)?.data?.nome || 'Carregando...' }}
         </span>
+        
         <mat-nav-list class="sidenav-flex-container">
             <a mat-list-item routerLink="/home"  class="nav-link" routerLinkActive="active-link-highlight">
                 <mat-icon>home</mat-icon> Início
@@ -27,7 +28,9 @@
             <span class="logo-text-white">BankMore</span>
             
             <span class="spacer"></span>
-
+            <span class="text-right">
+                Saldo: {{ (saldo$ | async)?.data?.saldoAtualizado | currency:'BRL':'symbol':'1.2-2'}}
+            </span>
             
         </mat-toolbar>
 

@@ -29,20 +29,31 @@ import { CommonModule } from '@angular/common';
 })
 export class LayoutComponent implements OnInit {
   informacoes$: Observable<any> | undefined;
+  saldo$: Observable<any> | undefined;
 
   constructor(private auth: AuthService, private contaService: ContaCorrenteService) {}
 
   ngOnInit(): void {
     this.informacoes$ = this.contaService.getInformacoes().pipe(
       tap({
-      next: (data) => {
-        console.log('Dados do usuário carregados:', data);
-        
-      },
-      error: (err) => {
-        console.error('Erro ao carregar dados:', err);
-      }
-    })
+        next: (data) => {
+          
+        },
+        error: (err) => {
+          console.error('Erro ao carregar dados:', err);
+        }
+      })
+    );
+
+    this.saldo$ = this.contaService.getSaldo().pipe(
+      tap({
+        next: (data) => {
+          
+        },
+        error: (err) => {
+          console.error('Erro ao carregar dados:', err);
+        }
+      })
     );
   }
   
