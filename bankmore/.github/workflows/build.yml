@@ -1,0 +1,32 @@
+name: BankMore: Build e Teste 
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 25 
+        cache: 'npm'
+
+    - name: Instalar Dependências
+      run: npm install
+
+    - name: Rodar o Build do Angular
+     
+      run: npm run build -- --configuration=production
+      
+    - name: Rodar Testes Unitários
+      run: npm run test -- --watch=false --browsers=ChromeHeadless
