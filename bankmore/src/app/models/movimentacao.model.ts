@@ -1,4 +1,4 @@
-interface Movimentacao {
+export interface Movimentacao {
     valor: number;
     descricao: string;
 }

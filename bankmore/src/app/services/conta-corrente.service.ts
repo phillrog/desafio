@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from '../../environments/environment';
 import { BehaviorSubject, tap } from 'rxjs';
+import { Movimentacao } from '../models/movimentacao.model';
 
 @Injectable({
   providedIn: 'root',
