@@ -52,9 +52,10 @@ O frontend Angular atua como o **Cliente** da arquitetura, responsável por gere
 
     # Projeto Backend
 
-    <img width="1911" height="957" alt="Captura de tela 2025-12-08 221326" src="https://github.com/user-attachments/assets/d6c172ab-f453-4efa-9d4d-2cf0262de6cc" />
+    <img width="1917" height="963" alt="image" src="https://github.com/user-attachments/assets/01409280-38f3-4a6a-b4c2-4ef9d80fac54" />
 
-    💻 Documentação Detalhada do Projeto BankMore
+
+#💻 Documentação Detalhada do Projeto BankMore
 ---------------------------------------------
 
 O repositório **phillrog/bankmore-desafio** na *branch* `identity-duende` implementa uma arquitetura de microsserviços bancários com foco em resiliência, consistência distribuída e segurança.
